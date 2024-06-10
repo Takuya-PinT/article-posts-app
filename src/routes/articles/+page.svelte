@@ -1,0 +1,16 @@
+<script lang="ts">
+    import Card from "./Card.svelte";
+
+    export let data: { articles: { id: number; title: string; createdAt: Date }[] } = { articles: [] };
+    console.log(data.articles)
+</script>
+
+<h1 class="text-3xl font-bold mt-4">記事一覧</h1>
+
+<ul class="mt-4 grid grid-cols-1 gap-4">
+    {#each data.articles as article (article.id)}
+        <li>
+            <Card id={article.id} title={article.title} createdAt={article.createdAt}/>
+        </li>
+    {/each}
+</ul>
