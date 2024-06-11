@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 </script>
- 
+
 <div class="bg-gray-200 min-h-screen flex flex-col">
 	<header class="sticky top-0 z-50 bg-white shadow-md h-16">
 		<nav class="container mx-auto flex justify-between items-center py-4">

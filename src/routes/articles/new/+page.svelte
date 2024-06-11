@@ -1,7 +1,7 @@
 <svelte:head>
-  <title>新規記事投稿</title>
+    <title>新規記事投稿</title>
 </svelte:head>
- 
+
 <form method="POST">
 	<div class="grid gap-6 mt-6">
 		<div>

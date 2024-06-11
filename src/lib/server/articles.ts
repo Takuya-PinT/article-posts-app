@@ -15,6 +15,7 @@ export async function getArticles(): Promise<{ articles: readonly Article[]}> {
 }
 
 export async function getArticleById(id: number): Promise<Article | null> {
+    console.log("aaaaaaaaaaaaaaaaaaa")
     const article = await prisma.article.findUnique({
         where: {
             id
@@ -23,7 +24,7 @@ export async function getArticleById(id: number): Promise<Article | null> {
     return article;
 }
 
-export const articleSchma = z.object({
+export const articleSchema = z.object({
     title: z.string().min(1).max(20),
     content: z.string().min(1).max(1000)
 })
