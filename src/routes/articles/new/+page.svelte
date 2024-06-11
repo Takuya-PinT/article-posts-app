@@ -1,3 +1,8 @@
+<script lang="ts">
+	export let form = $$props.form
+	console.log(form)
+</script>
+
 <svelte:head>
     <title>新規記事投稿</title>
 </svelte:head>
@@ -8,10 +13,11 @@
 			<label for="title" class="block mb-2 text-sm font-medium text-gray-900">タイトル</label>
 			<input
 				id="title"
-        name="title"
+				name="title"
 				class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
 				required
 			/>
+
 		</div>
 		<div>
 			<label for="content" class="block mb-2 text-sm font-medium text-gray-900">本文</label>
@@ -20,7 +26,7 @@
 				name="content"
 				rows="10"
 				class="border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-        required
+				required
 			></textarea>
 		</div>
 		<div>

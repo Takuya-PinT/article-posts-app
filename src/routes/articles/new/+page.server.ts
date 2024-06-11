@@ -2,7 +2,6 @@ import { error, fail, redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types";
 import { articleSchema, createArticle } from "$lib/server/articles";
 
-console.log("bbbbbbbbbbbbbb")
 export const actions: Actions = {
     default: async ({ request }) => {
         const formData = await request.formData();
@@ -11,9 +10,10 @@ export const actions: Actions = {
             content: formData.get('content')
         });
         if (!validatedFields.success) {
+            // console.log(validatedFields.error.formErrors.fieldErrors);
             return fail(400,{
                 errors: validatedFields.error.formErrors,
-                fileds: {
+                fields: {
                     title: formData.get('title') as string | undefined,
                     content: formData.get('content') as string | undefined
                 }

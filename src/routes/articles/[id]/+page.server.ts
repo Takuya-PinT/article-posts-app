@@ -4,7 +4,6 @@ import type { PageServerLoad } from "./$types";
 
 
 export const load: PageServerLoad = async ({params}) => {
-    console.log("afadfadfafadfas")
     const article = await getArticleById(Number(params.id));
 
     if (article === null) {

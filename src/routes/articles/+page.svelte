@@ -2,7 +2,6 @@
     import Card from "./Card.svelte";
 
     export let data: { articles: { id: number; title: string; createdAt: Date }[] } = { articles: [] };
-    console.log(data.articles)
 </script>
 
 <h1 class="text-3xl font-bold mt-4">記事一覧</h1>

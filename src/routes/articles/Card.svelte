@@ -1,4 +1,5 @@
 <script lang="ts">
+    import DeleteModal from './deleteModal.svelte';
     export let id: number;
     export let title: string;
     export let createdAt: Date;
@@ -10,5 +11,8 @@
             <h2 class="text-lg font-bold">{title}</h2>
         </a>
         <time datetime="{createdAt.toISOString()}" class="text-sm text-gray-500"></time>
+    </div>
+    <div>
+        <DeleteModal {id} />
     </div>
 </div>

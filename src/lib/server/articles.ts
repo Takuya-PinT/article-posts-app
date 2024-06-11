@@ -15,7 +15,6 @@ export async function getArticles(): Promise<{ articles: readonly Article[]}> {
 }
 
 export async function getArticleById(id: number): Promise<Article | null> {
-    console.log("aaaaaaaaaaaaaaaaaaa")
     const article = await prisma.article.findUnique({
         where: {
             id
@@ -34,4 +33,12 @@ export async function createArticle(data: Pick<Article, 'title' | 'content'>): P
         data
     });
     return article;
+}
+
+export async function deleteArticle(id: number): Promise<void> {
+    await prisma.article.delete({
+        where: {
+            id
+        }
+    });
 }
